@@ -328,3 +328,43 @@ console.log(t)
 let str = 'hello,memory,id'
 let t1 = str.split(',')
 console.log(t1)
+
+// 클래스 선언 - 대문자로 시작하는 이름
+class Product {
+    constructor (name, price) {
+        this.name = name
+        this.price = price
+    }
+    print() {
+        console.log(`${this.name}의 가격은 ${this.price}원입니다.`)
+    }
+}
+
+let product = new Product('바나나', 1200)
+console.log(product.name)
+console.log(product.price)
+
+let products = [
+    new Product('바나나', 1200),
+    new Product('사과', 2000),
+    new Product('배', 3000),
+]
+
+for (let product of products) {
+    product.print()
+}
+
+console.log(null)
+console.log(typeof(null))
+
+let num = 0;
+let fbool = ''
+let emptyString = ""
+let undefinedValue
+let nullValue = null
+
+if (num == null)                console.log("0은 존재하지 않는 값입니다.")
+if (fbool == null)              console.log("false는 존재하지 않는 값입니다.")
+if (emptyString == null)        console.log("빈 문자열은 존재하지 않는 값입니다.")
+if (undefinedValue == null)     console.log("undefinedValue는 존재하지 않는 값입니다.")
+if (nullValue == null)          console.log("null은 존재하지 않는 값입니다.")
