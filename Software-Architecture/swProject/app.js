@@ -1,18 +1,14 @@
+// 모듈
 const express = require("express");
 const app = express();
+
+// 라우팅
+const home = require("./routes/home")
 
 // 앱 세팅
 app.set("views", "./views");
 app.set("view engine", "ejs");
 
-app.get("/", (req, res) => {
-    res.render("home/index");
-});
+app.use("/", home)
 
-app.get("/login", (req, res) => {
-    res.render("home/login");
-});
-
-app.listen(3000, () => {
-    console.log("server start");
-});
+module.exports = app;
